@@ -1,0 +1,15 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() {
+    ifstream fa("../source.txt");
+    ofstream fb("../copy.txt");
+    string word;
+    while (getline(fa,word)) {
+        fb<<word;
+    }
+
+    fa.close();
+    fb.close();
+    return 0;
+}
