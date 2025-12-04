@@ -1,0 +1,17 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() {
+    ifstream fa("../ input.txt");
+    ofstream fb("../even.txt.");
+    int n;
+    while (fa>>n) {
+        if (n % 2 == 0) {
+            fb<<n<<" ";
+        }
+    }
+
+    fa.close();
+    fb.close();
+    return 0;
+}
