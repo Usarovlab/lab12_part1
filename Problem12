@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream fin("data.txt");   // open file for reading
+
+    if (!fin) {
+        cout << "File not found!";
+        return 1;
+    }
+
+    int x;
+    int countNeg = 0;
+
+    while (fin >> x) {   // read all integers
+        if (x < 0)
+            countNeg++;
+    }
+
+    cout << countNeg;
+
+    fin.close();
+    return 0;
+}
