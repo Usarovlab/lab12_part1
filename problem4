@@ -1,0 +1,12 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() {
+    ofstream fin("../count.txt");
+    int N;
+    cin>>N;
+    for (int i=1; i<=N; i++ )
+        fin<<i<<" ";
+    fin.close();
+    return 0;
+}
