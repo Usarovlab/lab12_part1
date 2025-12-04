@@ -1,0 +1,18 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() {
+    ifstream fa("../a.txt");
+    ifstream fb("../b.txt");
+    int x, count=0;
+    while (fa>>x) {
+        count ++;
+    }
+    while (fb>>x) {
+        count ++;
+    }
+    cout<<count;
+    fa.close();
+    fb.close();
+    return 0;
+}
