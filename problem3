@@ -1,0 +1,14 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() {
+    ifstream fin("../numbers.txt");
+    int x, max=0;
+    while (fin>>x) {
+        if (x>max)
+        max=x;
+    }
+    fin.close();
+    cout<<max;
+    return 0;
+}
